@@ -10,7 +10,7 @@ Visit <https://github.com/LABHR/octohatrack> for more information.
 
 First time, download Makefile:
 ```
-wget https://git.io/octohatrack-make
+wget https://git.io/octohatrack-make -O Makefile
 ```
 
 And set required environment variables `GITHUB_TOKEN` and `USERNAME_SLASH_REPO`:
