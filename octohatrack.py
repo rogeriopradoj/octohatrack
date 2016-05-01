@@ -1,2 +1,0 @@
-import octohatrack
-octohatrack.main()

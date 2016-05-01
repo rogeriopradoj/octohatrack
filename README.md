@@ -4,13 +4,45 @@ Visit <https://github.com/LABHR/octohatrack> for more information.
 
 ## Docker usage
 
+### make
+
+#### Preparation
+
+First time, download Makefile:
+```
+wget https://git.io/octohatrack-make
+```
+
+And set required environment variables `GITHUB_TOKEN` and `USERNAME_SLASH_REPO`:
+
+```
+export GITHUB_TOKEN=123456 # https://github.com/settings/tokens
+export USERNAME_SLASH_REPO=username/repo # update accordingly
+```
+
+#### Go!
+
+```
+make
+
+;# or
+
+make USERNAME_SLASH_REPO=username/repo
+
+;# or
+
+USERNAME_SLASH_REPO=username/repo make 
+```
+
+### Using docker commands directly
+
 Firstly, update your local image
 
 ```
 docker pull rogeriopradoj/octohatrack:latest
 ```
 
-Then, set your environment variable `GITHUB_TOKEN`:
+Then, set required environment variable `GITHUB_TOKEN`:
 
 ```
 export GITHUB_TOKEN=123456 # https://github.com/settings/tokens
