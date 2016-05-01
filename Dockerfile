@@ -1,12 +1,11 @@
 FROM python:slim
+MAINTAINER rogeriopradoj@gmail.com
 
+ENV GITHUB_TOKEN=update_accordingly
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
-
-COPY . /usr/src/app
 RUN pip install octohatrack
 
-ENTRYPOINT ["python", "octohatrack.py"]
-CMD ["-h"]
+WORKDIR /cache
 
+ENTRYPOINT ["octohatrack"]
+CMD ["-h"]
