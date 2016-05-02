@@ -1,6 +1,12 @@
 default: run
 
-run: update
+info:
+	@echo ""
+	@echo " >> Running octohatrack against repo: '$${USERNAME_SLASH_REPO}'"
+	@echo ""
+
+run: info update
+	@echo "Docker run container"
 	@: "$${GITHUB_TOKEN:?Need to set GITHUB_TOKEN non-empty}"
 	@: "$${USERNAME_SLASH_REPO:?Need to set USERNAME_SLASH_REPO non-empty}"
 
@@ -16,4 +22,7 @@ run: update
         $${USERNAME_SLASH_REPO}
 
 update:
-	docker pull rogeriopradoj/octohatrack:latest
+	@echo "Docker pull image"
+	@docker pull rogeriopradoj/octohatrack:latest >/dev/null 2>&1
+	@echo "...Done."
+	@echo ""
